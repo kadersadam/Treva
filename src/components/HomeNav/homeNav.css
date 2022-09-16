@@ -1,0 +1,25 @@
+.navSubMenu{
+z-index: 999;
+}
+.navSubMenu {
+    display: none;
+}
+.nav_container:hover .navSubMenu{
+    display: block;
+}
+.navDrawer{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #d6d6d6;
+}
+::-webkit-scrollbar-thumb {
+    background: #F55A48;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
