@@ -17,7 +17,7 @@ const useStyles = makeStyles({
             '& .doted': {
                 width: '65%',
                 height: '2px',
-                background: Colors.grey,
+                background: Colors.grain,
                 ['@media (max-width:800px)']: {
                   width:'58%'
                 },

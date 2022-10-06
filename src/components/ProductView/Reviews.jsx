@@ -48,7 +48,9 @@ const useStyles = makeStyles({
             '& textarea': {
                 // padding: '10px',
                 borderRadius: '5px',
+                outline:'none',
                 marginBottom: '10px',
+                border:`1px solid ${Colors.grain}`
             },
             '& .submit': {
                 color: Colors.white,

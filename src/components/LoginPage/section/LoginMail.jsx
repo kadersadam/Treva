@@ -98,7 +98,7 @@ const useStyles = makeStyles({
 const LoginMail = ({ setForm, iconLoad, seticonLoad, setpassword} ) => {
     const classes = useStyles()
 
-    
+    const navigate=useNavigate()
     // const navigate = useNavigate()
     
     const gotoForm = () => {
@@ -111,6 +111,7 @@ const LoginMail = ({ setForm, iconLoad, seticonLoad, setpassword} ) => {
     const test = (e) => {
         e.preventDefault();
         alert('submitted')
+        navigate('/shipping')
     }
 
     return (
@@ -131,7 +132,7 @@ const LoginMail = ({ setForm, iconLoad, seticonLoad, setpassword} ) => {
                             <ImKey className="mail_icon" size={18} />
                         </div>
                         <div className="forgot_pwd mt-1">Forgot Password?</div>
-                        <button className="submit_button" >Submit</button>
+                        <button className="submit_button"  >Submit</button>
 
                     </form>
                 </Card>

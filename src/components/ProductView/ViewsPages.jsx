@@ -41,7 +41,7 @@ const useStyles = makeStyles({
         },
         '& .image-gallery-thumbnail.active, .image-gallery-thumbnail': {
             outline: 'none !important',
-            border: '1px solid grey',
+            border: `1px solid ${Colors.grain}`,
             padding: '10px 6px ',
             borderRadius: '10px',
             margin: '8px'
@@ -154,6 +154,9 @@ const useStyles = makeStyles({
     }
 })
 const ViewsPages = () => {
+    const addcart = () => {
+        
+    }
 
     const similarproducts = [
         {
@@ -280,7 +283,7 @@ const ViewsPages = () => {
                     </div>
                     <div className="horizontal-line" ></div>
                     <div className="cart d-flex justify-content-start  align-items-center">
-                        <div><button>ADD TO CART</button></div>
+                        <div><button onClick={addcart}>ADD TO CART</button></div>
                         <div><button className="buy">Buy Now</button></div>
                         <div><RiHeartLine style={{ fontSize: '42px', color: 'red' }} /></div>
                     </div>

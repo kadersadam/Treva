@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import Box from '@mui/material/Box';
 import Havells from '../../../../helpers/assests/BrandItems/Havells.png'
 import Colors from '../../../../helpers/Colors';
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles({
                 gridTemplateColumns: 'repeat(1, 1fr)',
             },
             '& .grid_items': {
-                border: `1px solid ${Colors.grey}`,
+                border: `1px solid ${Colors.grain}`,
                 padding: '25px',
                 '& .img_container': {
                     '& img': {
@@ -81,7 +82,7 @@ const BrandItems = () => {
         },
         {
             title: 'Bosch',
-            items: '12 items',
+            items: '126 items',
             images: Havells
         },
         {
@@ -96,7 +97,7 @@ const BrandItems = () => {
         },
         {
             title: 'Bosch',
-            items: '12 items',
+            items: '126 items',
             images: Havells
         },
         {
@@ -116,7 +117,11 @@ const BrandItems = () => {
         },
     ]
 
-    const slicedItems = items.slice(0, 10)
+    const slicedItems = items.slice(0, 12)
+    const navigate = useNavigate()
+    const gotoconditioner = () => {
+        navigate('/Listing')
+    }
 
     return (
         <div className={classes.root} style={{ width: '100%' }}>
@@ -124,7 +129,7 @@ const BrandItems = () => {
                 {
                     slicedItems.map((item, index) => {
                         return (
-                            <div key={index} className='grid_items d-flex align-items-center justify-content-center' onClick={() => console.log('clicked')}>
+                            <div key={index} className='grid_items d-flex align-items-center justify-content-center' onClick={gotoconditioner} >
                                 <div className='img_container me-1'><img src={item.images} alt="" /></div>
                                 <div>
                                     <p className='fs-5 p-0 m-0 item_title'>{item.title}</p>

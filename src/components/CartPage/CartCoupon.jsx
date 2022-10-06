@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from '@mui/styles'
 import Colors from "../../helpers/Colors";
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
     root: {
@@ -96,6 +97,10 @@ const useStyles = makeStyles({
 
 
 const CartCoupon = () => {
+    const navigate = useNavigate()
+    const checkoutPrice = () => {
+        navigate('/loginmobile')
+    }
     const classes = useStyles()
     return (
         <div className={classes.root}>
@@ -133,7 +138,7 @@ const CartCoupon = () => {
                             <div style={{ textAlign: 'end', marginTop: '-20px' }}>
                                 <span style={{ fontSize: '12px', fontWeight: 'lighter' }} >( Incl. of All Taxes. )</span></div>
                             <div style={{ textAlign: 'center', marginTop: '15px' }}>
-                                <button style={{ border: '1px solid #F2F2F2', borderRadius: '50px', fontSize: '16px', fontWeight: 'bold', width: '100%', padding: '5px 0', background: 'linear-gradient(to right bottom, #08E0C3, #28C5E5)', color: Colors.white }}>Proceed to checkout</button>
+                                <button style={{ border: '1px solid #F2F2F2', borderRadius: '50px', fontSize: '16px', fontWeight: 'bold', width: '100%', padding: '5px 0', background: 'linear-gradient(to right bottom, #08E0C3, #28C5E5)', color: Colors.white }} onClick={checkoutPrice}>Proceed to checkout</button>
                             </div>
                         </div>
                     </Card.Body>

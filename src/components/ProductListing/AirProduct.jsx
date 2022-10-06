@@ -9,6 +9,7 @@ import { BsCart2 } from 'react-icons/bs'
 import { MdFilterAlt } from 'react-icons/md'
 import { Button, Drawer, Radio, Space } from 'antd';
 import SubCategories from "./SubCategories";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -116,6 +117,7 @@ const useStyles = makeStyles({
 })
 
 const AirProduct = () => {
+    const navigate=useNavigate()
     const classes = useStyles()
     const Inverter = [
 
@@ -185,6 +187,9 @@ const AirProduct = () => {
     const showDrawer = () => {
         setVisible(true);
     };
+    const gotoviewcart = () => {
+        navigate('/Productview')
+    }
 
     // const onChange = (e) => {
     //     setPlacement(e.target.value);
@@ -209,7 +214,7 @@ const AirProduct = () => {
                 {
                     sliced.map((item, index) => {
                         return (
-                            <Card style={{ with: '13rem' }} key={index} className='Aircards_container mb-2'>
+                            <Card style={{ with: '13rem' }} key={index} className='Aircards_container mb-2' onClick={gotoviewcart}>
                                 <Card.Body>
                                     <p className='Air_name'>{item.brand}</p>
                                     <h6 className='p-0 m-0 Air_title'>{item.title}</h6>

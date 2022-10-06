@@ -17,8 +17,9 @@ import LoginMobile from "./components/LoginPage/section/LoginMobile";
 import LoginOtp from "./components/LoginPage/section/LoginOtp";
 import LoginForm from "./components/LoginPage/section/LoginForm";
 import Shipping from "./components/ShippingPage/Shipping";
-import Stepper from "./components/Stepper/Stepper";
 import Billing from "./components/BillingPage/Billing";
+import Steppers from "./components/Stepper/Steppers";
+import OurBrands from "./components/OurBrands/OurBrands";
 function App() {
   return (
     <div>
@@ -29,7 +30,8 @@ function App() {
           <Route path="/Productview" element={<Productview />} />
           <Route path="/Cart" element={<MyCart />} />
           <Route path="/loginmobile" element={<LoginImage />} />
-          <Route path="/shipping" element={<Stepper />} />
+          <Route path="/shipping" element={<Steppers />} />
+          <Route path="/brands" element={<OurBrands/>} />
         </Routes>
       </BrowserRouter>
     </div>

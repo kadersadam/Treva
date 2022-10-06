@@ -6,12 +6,12 @@ import Copy from "../Shared/Footer/Copy";
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BsTruck } from 'react-icons/bs';
 import { MdOutlineAttachMoney } from 'react-icons/md';
-import Steppers from 'react-stepper-horizontal';
+import Stepper from 'react-stepper-horizontal';
 // import { FormProvider, ShippingPage } from '../components/ShippingPage';
 import Shipping from "../ShippingPage/Shipping";
-import MyCart from "../CartPage/MyCart";
-import ShippingForm from "../ShippingPage/ShippingForm";
+// import ShippingForm from "../ShippingPage/ShippingForm";
 import Billing from "../BillingPage/Billing";
+import CartImage from '../../helpers/assests/Shpping image/Cart.png'
 
 const useStyles = makeStyles({
     root: {
@@ -23,9 +23,12 @@ const Form = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
     const sections = [
-        { title: 'Checkout Information', icon:< AiOutlineShoppingCart/>},
-        { title: 'Billing Information', icon: < AiOutlineShoppingCart /> },
-        { title: 'Select Payment', icon: < AiOutlineShoppingCart /> },
+        {
+            title: 'Checkout Information',
+            // icon: <AiOutlineShoppingCart />
+        },
+        { title: 'Billing Information',  },
+        { title: 'Select Payment', },
     ];
     useEffect(() => {
         setCurrentPage(currentPage)
@@ -42,13 +45,14 @@ const Form = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <Steppers
+                <Stepper
                     steps={sections}
                     activeStep={currentPage}
                     activeColor="red"
                     defaultBarColor="red"
                     completeColor="green"
                     completeBarColor="green"
+                    
                     
 
                 />
@@ -85,7 +89,7 @@ const Form = () => {
 }
 
 
-const Stepper = () => {
+const Steppers = () => {
     const classes = useStyles()
     return (
         <>
@@ -106,4 +110,4 @@ const Stepper = () => {
     )
 }
 
-export default Stepper;
+export default Steppers;

@@ -175,7 +175,7 @@ const ShippingForm = ({ setCurrentPage }) => {
                                 </select>
                             </div>
                         </div>
-                        <div className={"row  "}>
+                        <div className={"row  "} style={{marginBottom:'20px'}}>
                             <div className={"col-lg-6  py-2"}>
                                 <label>City</label>
                                 <select>
